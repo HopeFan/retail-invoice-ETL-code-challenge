@@ -27,18 +27,21 @@ You've been working closely with the Applied Data Scientists in the team to unde
 
 - **Transforms the raw data into the features required by the scientists**
 
-**Answer** : first I created `data_investigation.py` to become more familiar with the data. Then craeted the ETL data pipeline here `trs_pipeline.py` 
+### SOLUTION :
 
+first I created `data_investigation.py` to become more familiar with the data. Then craeted the ETL data pipeline here `trs_pipeline.py` 
 - **Tests your ETL job using the CSV extracts provided**
 
-**Answer** : the pipeline is tested.  we can also impletent some unit tests to test the functions in the pipeline
+### SOLUTION :
+
+the pipeline is tested.  we can also impletent some unit tests to test the functions in the pipeline
 
 - **Highlights any intermediate data models you might use to store the data and why**
+### SOLUTION :
+ intermediate tables are highlighted in this DAG chart.
 
-**Answer** : intermediate tables are highlighted in this DAG chart.
 
-
-![Drag Racing](DAG.jpg)
+![Drag Racing](task_one/DAG.jpg)
 
 
 There are five intermediate tables:
@@ -76,6 +79,7 @@ I used:
 Having written the ETL job to do the data transformation required, we now need to design the overall system architecture that will allow the Data Team to operationalise the ETL job and maintain it as a long-lifed production system. As part of your response, please add to the repository the documentation that:
 
 - **Shows the architecture of a production system that could run your (and similar) ETL jobs, before exposing the resulting datasets to the various consumers.**
+### SOLUTION :
 
 Architecture of a production system that could run ETL jobs on a regular basis:
 One possible architecture for a production system that could run ETL jobs on a regular basis would be a batch processing architecture. This architecture would involve the following components:
@@ -92,13 +96,13 @@ One possible architecture for a production system that could run ETL jobs on a r
 
 Here is a high-level diagram of this architecture:
 
-![Drag Racing](high-level-architecture.jpg)
+![Drag Racing](task_two/high-level-architecture.jpg)
 
 - **Indicates how your architecture would evolve to support near real-time updating of data as the TRS engineering team enables CDC**.
 
 Architecture Evolution for Near Real-Time Updating of Data:
 
-![Drag Racing](realtime-high-level-archiectrue.jpg)
+![Drag Racing](task_two/realtime-high-level-archiectrue.jpg)
 
 To support near real-time updating of data as the TRS engineering team enables CDC, the production system architecture can be modified as follows:
 
@@ -112,11 +116,13 @@ The architecture includes the following components:
 
 - **Highlights any key architectural decisions made, and explains them**.
 
+  ### SOLUTION :
+
 Key Architectural Decisions:
 
 Some key architectural decisions made in the proposed production system are:
 
 **Use of Serverless ETL**: The use of serverless ETL allows for cost savings and automatic scaling of resources. AWS Glue can automatically generate ETL code and scale to handle large datasets.
 
-**Use of Object Store or Relational Database**: The decision to store data in an object store or relational database is based on the trade-off between cost and querying ease. Storing
+**Use of Object Store or Relational Database**: The decision to store data in an object store or relational database is based on the trade-off between cost and querying ease.
 
